@@ -25,7 +25,7 @@ export default function useHorizontalDragScroll() {
     e.preventDefault()
 
     const x = e.pageX - ref.current.offsetLeft
-    const walk = (x - startX.current) * 2
+    const walk = (x - startX.current) * 1.5
     ref.current.scrollLeft = scrollLeft.current - walk
   }
 

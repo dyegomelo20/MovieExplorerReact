@@ -29,6 +29,7 @@ const TabFilmes = () => {
           <img src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} alt="" />
           <h2>{filme.title}</h2>
           <div className="classificacao">
+            <p>{filme.release_date.slice(0, 4)}</p>
             <img src={estrela} alt="Estrela" className="estrela"/>
             <p>{Math.floor(filme.vote_average * 10) / 10}</p>
           </div>

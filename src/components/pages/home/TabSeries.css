@@ -31,7 +31,6 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
-    border: 1px solid #ccc;
     cursor: pointer;
     width: 100%;
     max-width: 300px;
@@ -71,6 +70,10 @@
 
 }
 
+.tabseries ul li .classificacao p:first-child {
+    margin: 0 30px 0 0;
+}
+
 .tabseries ul li img.estrela {
     width: 10px;
     height: auto;
@@ -87,5 +90,72 @@
     width: 300px;  
     height: 100%;
     pointer-events: none; 
-    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background: linear-gradient(to left, rgba(16, 14, 28, 1), rgba(16, 14, 28, 0))
+
+}
+
+
+@media (max-width: 1020px) {
+    .tabseries h1 {
+        font-size: 40px;
+    }
+
+    .tabseries ul li {
+        max-width: 260px;
+    }
+
+    .tabseries ul li img {
+        height: 380px;
+    }
+}
+
+
+@media (max-width: 770px) {
+    .tabseries h1 {
+        font-size: 35px;
+    }
+
+    .tabseries ul li {
+        max-width: 220px;
+    }
+
+    .tabseries ul li img {
+        height: 360px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .tabseries{
+        padding: 10;
+    }
+    .tabseries h1 {
+        font-size: 20px;
+    }
+
+    .tabseries ul li {
+        max-width: 120px;
+    }
+
+    .tabseries ul li h2{
+        font-size: 15px;
+        height: 35px;
+    }
+
+    .tabseries ul li img {
+        height: 180px;
+    }
+
+    .tabseries ul li .classificacao p {
+        font-size: 12px;
+    }
+
+    .tabseries ul li .classificacao p:first-child {
+    margin: 0 15px 0 0;
+}
+
+
+    .tabseries .liste-series .sombra {
+    width: 50px;   
+}
 }

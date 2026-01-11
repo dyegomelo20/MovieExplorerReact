@@ -1,0 +1,63 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #110d22;
+}
+
+nav a {
+    color: #fff;
+}
+
+nav form input {
+    padding: 10px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    font-size: 20px
+}
+
+nav form input:focus {
+    border: none;
+}
+
+nav button {
+    padding: 10px;
+    border-radius: 0 15px 15px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    nav h1 {
+        font-size: 30px;
+    }
+
+    nav form input {
+        font-size: 15px;
+    }
+
+    nav button {
+    font-size: 15px;
+}
+
+}
+
+
+@media (max-width: 500px) {
+    nav h1 {
+        font-size: 17px;
+    }
+
+    nav form input {
+        padding: 5px;
+        font-size: 12px;
+        width: 130px;
+    }
+
+    nav button {
+    font-size: 12px;
+    padding: 5px;
+}
+
+}

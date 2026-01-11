@@ -29,6 +29,7 @@ const { data, loading } = useApi("/tv/popular")
                 <img src={`https://image.tmdb.org/t/p/w500/${serie.poster_path}`} alt="" />
                 <h2>{serie.name}</h2>
                 <div className="classificacao">
+                  <p>{serie.first_air_date.slice(0, 4)}</p>
                   <img src={estrela} alt="Estrela" className="estrela"/>
                   <p>{Math.floor(serie.vote_average * 10) / 10 }</p>
                 </div>
