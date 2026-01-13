@@ -36,7 +36,12 @@
     max-width: 300px;
     height:100%;
     max-height: 700px;
-    flex-shrink: 0
+    flex-shrink: 0;
+    transition: 0.5s;
+}
+
+.tabfilmes ul li:hover {
+    color: #777;
 }
 
 .tabfilmes ul li img {
@@ -61,8 +66,10 @@
     align-items: center;
     gap: 4px;
     margin-top: 4px;
-
 }
+
+
+
 .tabfilmes ul li .classificacao p:first-child {
     margin: 0 30px 0 0;
 }

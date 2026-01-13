@@ -1,0 +1,44 @@
+.movie-poster {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.movie-poster img {
+    width: 400px;
+}
+
+.description{
+    padding: 10px 10px 150px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.description div  {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.description div p {
+    width: 5px;
+}
+
+.description div img {
+    width: 20px;
+}
+
+.description h2 {
+    width: 500px;
+}
+
+.description p {
+    width: 500px;
+}
+
+.description p:first-of-type {
+    text-align: center;
+}

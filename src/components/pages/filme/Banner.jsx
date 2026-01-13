@@ -1,15 +1,14 @@
 import { useMovieApi } from "../../../hooks/useApi"
+import { useParams, } from "react-router-dom"
 
-const Banner = () => {
-
-    const {data} = useMovieApi("movie/11")
-
-    console.log(data)
+const Banner = ({data}) => {
 
     if(!data) return
 
   return (
-    <div>Banne</div>
+    <div className="movie-poster">
+        <img src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} alt="" />
+    </div>
   )
 }
 
