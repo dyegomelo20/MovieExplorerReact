@@ -1,8 +1,8 @@
-const CustomButton = ({children, className, style}) => {
+const CustomButton = ({children, className, style, type, onClick, disabled}) => {
 
 
 
-  return <button className={className} style={style}>{children}</button>
+  return <button className={className} style={style} type={type} onClick={onClick} disabled={disabled} >{children}</button>
 }
 
 export default CustomButton

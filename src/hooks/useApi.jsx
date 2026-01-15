@@ -53,6 +53,31 @@ const useApi = (endpoint) => {
 
 }
 
+export const useSearchApi = (endpoint, params, query) => {
+    const [data, setData] = useState(null)
+    const [loading, setLoading] = useState(true)
+
+    
+    const fetchData = async () =>{
+        try {
+            const res = await apiFilme.get(endpoint, { params })
+
+            setData(res.data)
+            setLoading(false)
+
+        } catch (error) {
+            console.log("Erro ao buscar dados:", error)
+        } 
+    }
+
+    useEffect(() => {
+        if (!query) return
+        fetchData()
+    }, [query, params?.page])
+
+    return {data, loading}
+}
+
 export default useApi;
 
 
