@@ -1,0 +1,147 @@
+.search {
+    overflow: hidden;
+}
+
+.search h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: auto;
+    gap: 20px;
+}
+
+.search ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    height:100%;
+    max-height: 700px;
+    flex-shrink: 0;
+    transition: 0.5s;
+}
+
+.search  ul li:hover{
+    color: #333;
+}
+
+.search ul li img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 10px
+}
+
+.search ul li .null-img{
+    width: 100%;
+    height: 430px;
+    border-radius: 10px;
+    background-color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search ul li h2 {
+    margin-top: 5px;
+    text-align: center;
+   font-size: 20px;
+   width: 100%;
+   overflow-y: hidden;
+   height: 23px;
+   font-weight: bold;
+}
+
+.search ul li .classificacao {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+
+
+.search ul li .classificacao p:first-child {
+    margin-right: 100px;
+}
+
+.search ul li img.estrela {
+    width: 10px;
+    height: auto;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 200px;
+}
+
+@media (max-width: 800px) {
+    .search h1 {
+        font-size: 35px;
+    }
+
+    .search ul li {
+        max-width: 220px;
+    }
+
+    .search ul li img {
+        height: 360px;
+    }
+
+    .search ul li .null-img {
+        height: 360px;
+    }
+
+    .search ul li .classificacao p:first-child {
+    margin-right: 80px;
+}
+}
+
+@media (max-width: 500px) {
+    .search{
+        padding: 10;
+    }
+    .search h1 {
+        font-size: 20px;
+    }
+
+    .search ul li {
+        max-width: 120px;
+    }
+
+    .search ul li h2{
+        font-size: 15px;
+        height: 35px;
+    }
+
+    .search ul li img {
+        height: 180px;
+    }
+
+    .search ul li .null-img{
+        height: 180px;
+    }
+
+    .search ul li .classificacao p {
+        font-size: 12px;
+    }
+
+    .search ul li .classificacao p:first-child {
+    margin: 0 15px 0 0;
+}
+
+}
