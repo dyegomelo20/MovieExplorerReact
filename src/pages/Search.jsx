@@ -8,11 +8,12 @@ const Search = () => {
     const [searchParams] = useSearchParams();
     const query = searchParams.get("q");
     const [page, setPage] = useState(1)
-    const {data, loading} = useSearchApi("/search/movie", {query, page}, query)
+    const {data, loading} = useSearchApi("/search/multi", {query, page}, query)
 
-
+    console.log(data)
     useEffect(() => {
         setPage(1)
+        console.log(page)
     }, [query])
 
     if (loading) return <p>Carregando...</p> 
@@ -21,14 +22,14 @@ const Search = () => {
         <h1>Reasultados: {query}</h1>
         <div>
             <ul>
-                {data.results.map((filme) => (
-                    <li key={filme.id}>
-                        <img src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} alt="" />
-                        <h2>{filme.title}</h2>
+                {data.results.map((multi) => (
+                    <li key={multi.id}>
+                        {multi.poster_path ? <img src={`https://image.tmdb.org/t/p/w500/${multi.poster_path}`} alt="" /> : <div><p>Sem imagem</p></div>}
+                        <h2>{multi.media_type === "movie" ? multi.title : multi.name}</h2>
                         <div className="classificacao">
-                        <p>{filme.release_date.slice(0, 4)}</p>
+                        <p>{multi.media_type === "movie" ? multi.release_date.slice(0, 4) : multi.first_air_date}</p>
                         <img src={estrela} alt="Estrela" className="estrela"/>
-                        <p>{Math.floor(filme.vote_average * 10) / 10}</p>
+                        <p>{Math.floor(multi.vote_average * 10) / 10}</p>
                         </div>
                     </li>
                 ))}

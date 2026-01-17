@@ -56,11 +56,11 @@ const useApi = (endpoint) => {
 export const useSearchApi = (endpoint, params, query) => {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true)
-
     
-    const fetchData = async () =>{
+    const fetchData = async (controller) =>{
         try {
-            const res = await apiFilme.get(endpoint, { params })
+            setLoading(true)
+            const res = await apiFilme.get(endpoint, { params, signal: controller.signal})
 
             setData(res.data)
             setLoading(false)
@@ -72,7 +72,14 @@ export const useSearchApi = (endpoint, params, query) => {
 
     useEffect(() => {
         if (!query) return
-        fetchData()
+        const controller = new AbortController()
+
+        fetchData(controller)
+
+        return () => {
+        controller.abort()
+        }
+
     }, [query, params?.page])
 
     return {data, loading}
