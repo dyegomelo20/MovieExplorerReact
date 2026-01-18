@@ -111,9 +111,9 @@
  .description.tv .sessao div.exibir p{
     opacity: 1;
  }
- .description.tv .sessao div.exibir p:nth-of-type(2){
+ .description.tv .sessao div.exibir p:nth-of-type(3){
     overflow: auto;
-    padding-right: 6px;
+    padding: 0 6px 10px 0
  }
 
 
@@ -127,7 +127,7 @@
 }
 
 .description.tv .sessao div.exibir p::-webkit-scrollbar-thumb {
-    background: #3b82f6; /* azul */
+    background: #3b82f6; 
     border-radius: 10px;
 }
 

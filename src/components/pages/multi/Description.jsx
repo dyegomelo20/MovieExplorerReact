@@ -68,6 +68,7 @@ const Description = ({data, type}) => {
                     <div key={season.id} className={`${isOpen ? "exibir" : ""}`}>
                     <h3>{season.name}</h3>
                     <p>Episódios: {season.episode_count}</p>
+                    <p>Lancamento:{season.air_date}</p>
                     <p>{season.overview}</p>
 
                     <CustomButton className="btn-exibir" onClick={() => setOpenSeasonId(isOpen ? null : season.id)}>

@@ -4,12 +4,20 @@ import estrela from "../assets/estrela.png"
 import { useEffect, useState } from "react";
 import CustomButton from "../components/global/CustomButton";
 import "./Search.css"
+import useNavigateApi from "../hooks/useNavigateApi";
 
 const Search = () => {
     const [searchParams] = useSearchParams();
     const query = searchParams.get("q");
     const [page, setPage] = useState(1)
     const {data, loading} = useSearchApi("/search/multi", {query, page}, query)
+    const navigateApi = useNavigateApi()
+
+    const handleClink = (type, id) => {
+    
+        navigateApi(`multi/${type}/${id}`)
+
+    }
 
     console.log(data)
     useEffect(() => {
@@ -24,7 +32,7 @@ const Search = () => {
         <div >
             <ul>
                 {data.results.filter((multi) => multi.media_type !== "person").map((multi) => (
-                    <li key={multi.id}>
+                    <li key={multi.id} onClick={() => handleClink(multi.media_type, multi.id)}>
                         {multi.poster_path ? <img src={`https://image.tmdb.org/t/p/w500/${multi.poster_path}`} alt="" /> : <div className="null-img"><p>Sem imagem</p></div>}
                         <h2>{multi.media_type === "movie" ? multi.title : multi.name}</h2>
                         <div className="classificacao">

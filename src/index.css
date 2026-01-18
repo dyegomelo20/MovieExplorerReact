@@ -11,6 +11,25 @@ body{
   color: #fff;
 }
 
+body::-webkit-scrollbar{
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track{
+  background: #0c0b14;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #3b82f6; 
+  border-radius: 10px;
+  transition: 0.4s;   
+}
+
+body::-webkit-scrollbar-thumb:hover{
+  background: #2563eb
+}
+
 ul {
   list-style: none;
 }

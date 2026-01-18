@@ -7,8 +7,9 @@ const ErrorPages = () => {
     <div>
         <h1>Ops</h1>
         <p>temos um problemar</p>
-        <p>{error.statusText}</p>
-        <p>{error.error.message}</p>
+        {error?.status && <p>Status: {error.status}</p>}
+        {error?.message && <p>Mensagem: {error.message}</p>}
+
     </div>
   )
 }

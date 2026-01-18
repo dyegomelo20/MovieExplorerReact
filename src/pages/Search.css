@@ -125,7 +125,8 @@
 
     .search ul li h2{
         font-size: 15px;
-        height: 35px;
+        height: 40px;
+        line-height: 1.4;
     }
 
     .search ul li img {

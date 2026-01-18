@@ -2,10 +2,18 @@ import useApi from "../../../hooks/useApi"
 import estrela from "../../../assets/estrela.png"
 import "./TabFilmes.css"
 import useHorizontalDragScroll from "../../../hooks/useHorizontalDragScroll"
+import useNavigateApi from "../../../hooks/useNavigateApi"
 
 const TabFilmes = () => {
   const { data, loading } = useApi("/movie/popular")
-   const dragScroll = useHorizontalDragScroll()
+  const dragScroll = useHorizontalDragScroll()
+  const navigateApi = useNavigateApi()
+
+  const handleClink = (id) => {
+    
+    navigateApi(`multi/movie/${id}`)
+
+  }
 
   
 
@@ -25,7 +33,7 @@ const TabFilmes = () => {
         onMouseMove={dragScroll.onMouseMove}
      >
         {data.results.map((filme) => (
-        <li key={filme.id}>
+        <li key={filme.id} onClick={() => handleClink(filme.id)}>
           <img src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} alt="" />
           <h2>{filme.title}</h2>
           <div className="classificacao">

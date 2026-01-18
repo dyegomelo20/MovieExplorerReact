@@ -1,14 +1,19 @@
 import useApi from "../../../hooks/useApi"
 import estrela from "../../../assets/estrela.png"
 import useHorizontalDragScroll from "../../../hooks/useHorizontalDragScroll"
-
 import "./TabSeries.css"
-
+import useNavigateApi from "../../../hooks/useNavigateApi"
 
 const TabSeries = () => {
 const { data, loading } = useApi("/tv/popular")
-   const dragScroll = useHorizontalDragScroll()
+const dragScroll = useHorizontalDragScroll()
+const navigateApi = useNavigateApi()
 
+  const handleClink = (id) => {
+    
+    navigateApi(`multi/tv/${id}`)
+
+  }
   
   if (loading ) return <p>Carregando...</p>
  
@@ -25,7 +30,7 @@ const { data, loading } = useApi("/tv/popular")
               onMouseMove={dragScroll.onMouseMove}
            >
               {data.results.map((serie) => (
-              <li key={serie.id}>
+              <li key={serie.id} onClick={() => handleClink(serie.id)}>
                 <img src={`https://image.tmdb.org/t/p/w500/${serie.poster_path}`} alt="" />
                 <h2>{serie.name}</h2>
                 <div className="classificacao">
