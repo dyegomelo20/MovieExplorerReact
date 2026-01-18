@@ -7,8 +7,8 @@ import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom'
 // pages
 import ErrorPages from './pages/ErrorPages.jsx'
 import Home from './pages/home.jsx'
-import Filme from './pages/Filme.jsx'
 import Search from './pages/Search.jsx'
+import Multi from './pages/Multi.jsx'
 
 
 
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/MovieExplorerReact/filme/:id",
-        element: <Filme />
+        path: "/MovieExplorerReact/multi/:type/:id",
+        element: <Multi />
       },
       {
         path: "/MovieExplorerReact/search",

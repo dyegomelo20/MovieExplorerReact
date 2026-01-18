@@ -1,11 +1,11 @@
-import {useMovieApi} from "../../../hooks/useApi"
+import useApi from "../../../hooks/useApi"
 import CustomButton from "../../global/CustomButton"
 import { Navigate } from "react-router-dom"
 import "./Banner.css"
 
 const Banner = () => {
 
-  const {data, loading} = useMovieApi("movie/786")
+  const {data, loading} = useApi("movie/786")
 
 
   if (!data) return <p>Carregando...</p>

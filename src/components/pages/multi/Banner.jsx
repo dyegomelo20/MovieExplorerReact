@@ -1,6 +1,3 @@
-import { useMovieApi } from "../../../hooks/useApi"
-import { useParams, } from "react-router-dom"
-
 const Banner = ({data}) => {
 
     if(!data) return

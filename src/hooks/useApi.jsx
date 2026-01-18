@@ -27,13 +27,13 @@ const useApi = (endpoint) => {
     return { data, loading}
 }
 
- export const useMovieApi = (filme) => {
+ export const useMultiApi = (endpoint) => {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true)
 
     const fetchData = async() => {
         try {
-            const res = await apiFilme.get(filme)
+            const res = await apiFilme.get(endpoint)
 
             setData(res.data)
             setLoading(loading)
@@ -47,7 +47,7 @@ const useApi = (endpoint) => {
 
     useEffect(() => {
         fetchData()
-    }, [filme])
+    }, [endpoint])
 
     return {data , loading}
 

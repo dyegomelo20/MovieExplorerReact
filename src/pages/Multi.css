@@ -1,0 +1,218 @@
+.movie-poster {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.movie-poster img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.description.movie{
+    padding: 10px 10px 150px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.description.movie div  {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.description.movie div p {
+    width: 5px;
+}
+
+.description.movie div img {
+    width: 20px;
+}
+
+.description.movie h2 {
+    width: 500px;
+}
+
+.description.movie p {
+    width: 500px;
+}
+
+.description.movie p:first-of-type {
+    text-align: center;
+}
+
+
+
+.description.tv{
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.description.tv .classificacao  {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.description.tv .classificacao p {
+    width: 5px;
+}
+
+.description.tv .classificacao img {
+    width: 20px;
+}
+
+.description.tv h2 {
+    width: 500px;
+}
+
+
+
+.description.tv p {
+    width: 500px;
+}
+
+.description.tv .sessao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.description.tv .sessao div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    background-color: #07060d;
+    border-radius: 15px;
+    height: 55px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.description.tv .sessao div p {
+    opacity: 0;
+    transition: 1.3s;
+}
+
+.description.tv .sessao div.exibir{
+    height: 300px;
+}
+
+ .description.tv .sessao div.exibir p{
+    opacity: 1;
+ }
+ .description.tv .sessao div.exibir p:nth-of-type(2){
+    overflow: auto;
+    padding-right: 6px;
+ }
+
+
+ .description.tv .sessao div.exibir p::-webkit-scrollbar {
+    width: 6px;
+}
+
+.description.tv .sessao div.exibir p::-webkit-scrollbar-track {
+    background: #0c0b14;
+    border-radius: 10px;
+}
+
+.description.tv .sessao div.exibir p::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* azul */
+    border-radius: 10px;
+}
+
+.description.tv .sessao div.exibir p::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+.description.tv .sessao div .btn-exibir {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #1d01d3;
+    border: 1px solid #1d01d3;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.description.tv .sessao div .btn-exibir:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+
+
+@media (max-width: 500px) {
+.movie-poster img {
+    width: 300px;
+
+}
+
+.description.movie{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.description.movie div  {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.description.movie div p {
+    width: 5px;
+}
+
+.description.movie div img {
+    width: 20px;
+}
+
+.description.movie h2 {
+    width: 300px;
+}
+
+.description.movie p {
+    width: 300px;
+}
+
+.description.movie p:first-of-type {
+    text-align: center;
+}
+
+
+.description.tv h2 {
+    width: 300px;
+}
+
+.description.tv p {
+    width: 300px;
+}
+
+.description.tv .sessao {
+    padding: 10px;
+}
+
+.description.tv .sessao div{
+    height: 55px;
+}
+
+.description.tv .sessao div .btn-exibir {
+    padding: 8px;
+}
+
+}
