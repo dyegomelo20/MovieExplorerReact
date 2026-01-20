@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.2.1
+- Exibe mensagem quando a busca não retorna resultados
+- Ajustes de espaçamento no CSS
+- Correção de textos
+- Remoção de console.log
+
+
 ## v1.2.0
 - Adicionada navegação por rotas dinâmicas
 - Página de detalhes para filmes e séries
