@@ -19,16 +19,16 @@ const Search = () => {
 
     }
 
-    console.log(data)
+    
     useEffect(() => {
         setPage(1)
-        console.log(page)
     }, [query])
 
     if (loading) return <p>Carregando...</p> 
   return (
     <div className="search">
-        <h1>Reasultados: {query}</h1>
+        <h1>Resultados: {query}</h1>
+        {data.total_results === 0 && (<h2 className="search-results">Sem resultados</h2>)}
         <div >
             <ul>
                 {data.results.filter((multi) => multi.media_type !== "person").map((multi) => (
@@ -46,11 +46,14 @@ const Search = () => {
                     </li>
                 ))}
             </ul>
-            <div className="pages">
+            {data.total_results > 0 && (
+                <div className="pages">
                 <CustomButton onClick={() => setPage(page - 1 )} disabled={page === 1} >Anterior</CustomButton>
                 <p>{page} de {data.total_pages}</p>
                 <CustomButton onClick={() => setPage(page + 1)} disabled={page === data.total_pages}>Proximo</CustomButton>
             </div>
+            )}
+            
         </div>
     </div>
   )

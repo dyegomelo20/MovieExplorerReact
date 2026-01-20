@@ -38,7 +38,6 @@ const useApi = (endpoint) => {
             setData(res.data)
             setLoading(loading)
 
-            console.log(data)
             
         } catch (error) {
             console.error("Erro ao buscar dados:", error)

@@ -11,7 +11,6 @@ const Multi = () => {
 
     const {data, loading} = useMultiApi(`${type}/${id}`)
 
-    console.log(type, id, data)
 
   return (
     <div>

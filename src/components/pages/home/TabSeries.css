@@ -11,7 +11,6 @@
     display: flex;
     padding: 10px 110px 10px 0;
     gap: 25px;
-    align-items: center;
     overflow-x: auto;
     cursor: grab;
     position: relative;
@@ -139,7 +138,8 @@
 
     .tabseries ul li h2{
         font-size: 15px;
-        height: 50px;
+        height: 50%;
+        max-height: 50px;
     }
 
     .tabseries ul li img {

@@ -57,7 +57,8 @@
 .description.tv .classificacao  {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .description.tv .classificacao p {
@@ -84,6 +85,12 @@
     align-items: center;
     gap: 20px;
     margin-top: 15px;
+}
+
+.description.tv .generos{
+    display: flex;
+    gap: 10px;
+    
 }
 
 .description.tv .sessao div {

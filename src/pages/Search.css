@@ -7,6 +7,11 @@
     margin-bottom: 10px;
 }
 
+.search > h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
 .search ul {
     display: flex;
     justify-content: space-evenly;

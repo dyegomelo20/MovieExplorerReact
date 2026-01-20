@@ -40,7 +40,7 @@ const Description = ({data, type}) => {
         <h2>Duração:</h2>
         <p>{formatminuto(data.runtime)}</p>
         <h2>Descrição:</h2>
-        <p>{data.overview}</p>
+        <p>{!data.overview ? "Sem Sinopse" : data.overview}</p>
         </>
         )}
         {type === "tv" && (
@@ -49,16 +49,16 @@ const Description = ({data, type}) => {
              <div className="classificacao"><img src={estrela} alt="estrela" /><p>{Math.floor(data.vote_average * 10) / 10}</p></div>
             <p>{data.tagline}</p>
             <h2>Generos:</h2>
-            <div>
+            <div className="generos">
                 {data.genres.map(g => (
                     <span key={g.id}>{g.name}</span>
                 ))}
             </div>
             <h2>Sinopse:</h2>
-            <p>{data.overview}</p>
+            <p>{data.overview === "" ? "Sem Sinopse" : data.overview}</p>
             <h2>Temporadas:</h2>
             <p>{data.number_of_seasons}</p>
-            <h2>Episódios Total</h2>
+            <h2>Episódios Total:</h2>
             <p>{data.number_of_episodes}</p>
             <div className="sessao">
                 {data.seasons.map((season) => {
