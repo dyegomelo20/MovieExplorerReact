@@ -218,6 +218,11 @@
     height: 55px;
 }
 
+.description.tv .sessao div h3{
+    width: 200px;
+    line-height: 1.8;
+}
+
 .description.tv .sessao div .btn-exibir {
     padding: 8px;
 }
