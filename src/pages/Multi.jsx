@@ -3,6 +3,7 @@ import Banner from "../components/pages/multi/Banner"
 import Description from "../components/pages/multi/Description"
 import { useMultiApi } from "../hooks/useApi"
 import "./Multi.css"
+import { useEffect } from "react"
 
 
 const Multi = () => {
@@ -11,6 +12,17 @@ const Multi = () => {
 
     const {data, loading} = useMultiApi(`${type}/${id}`)
 
+    useEffect(() =>{
+      
+      if (loading){
+        document.title = "Carregando..."
+      } else if (data){
+        document.title = `${data.title || data.name}`
+      }
+      if(!data){
+        document.title = "Não encotrado"
+      }
+    }, [data, loading])
 
   return (
     <div>

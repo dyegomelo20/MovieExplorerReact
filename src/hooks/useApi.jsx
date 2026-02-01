@@ -36,7 +36,7 @@ const useApi = (endpoint) => {
             const res = await apiFilme.get(endpoint)
 
             setData(res.data)
-            setLoading(loading)
+            setLoading(false)
 
             
         } catch (error) {

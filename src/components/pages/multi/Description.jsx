@@ -30,7 +30,7 @@ const Description = ({data, type}) => {
     <div className={`description ${type}` } >
         {type === "movie" && (
         <>
-        <h1>{data.original_title}</h1>
+        <h1>{data.title}</h1>
         <div><img src={estrela} alt="estrela" /><p>{Math.floor(data.vote_average * 10) / 10}</p></div>
         <p>{data.tagline}</p>
         <h2>Orçamento:</h2>

@@ -22,6 +22,7 @@ const Search = () => {
     
     useEffect(() => {
         setPage(1)
+        document.title = query
     }, [query])
 
     if (loading) return <p>Carregando...</p> 
