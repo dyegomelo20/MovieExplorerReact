@@ -1,10 +1,16 @@
 import estrela from "../../../assets/estrela.png"
 import CustomButton from "../../global/CustomButton"
 import { useState } from "react"
+import ModalTrailer from "./ModalTrailer";
 
 const Description = ({data, type}) => {
 
     const [openSeasonId, setOpenSeasonId] = useState(null);
+    const [modal, setModal] = useState(false)
+    
+    const onClose = () =>{
+        setModal(false)
+    }
 
     const formatminuto = (number) => {
         let minutosCalc = number
@@ -28,11 +34,14 @@ const Description = ({data, type}) => {
 
   return (
     <div className={`description ${type}` } >
+        {/* <ModalTrailer id={data.id} type={type} />  */}
         {type === "movie" && (
         <>
         <h1>{data.title}</h1>
         <div><img src={estrela} alt="estrela" /><p>{Math.floor(data.vote_average * 10) / 10}</p></div>
         <p>{data.tagline}</p>
+        <button onClick={() => setModal(true)}>Assitir Trailer</button>
+        {modal && <ModalTrailer id={data.id} type={type} ativo={"ativo"} onClose={onClose}/> }
         <h2>Orçamento:</h2>
         <p>{formatDolar(data.budget)}</p>
         <h2>Receita:</h2>
@@ -48,6 +57,8 @@ const Description = ({data, type}) => {
             <h1>{data.name}</h1>
              <div className="classificacao"><img src={estrela} alt="estrela" /><p>{Math.floor(data.vote_average * 10) / 10}</p></div>
             <p>{data.tagline}</p>
+            <button onClick={() => setModal(true)}>Assitir Trailer</button>
+            {modal && <ModalTrailer id={data.id} type={type} ativo={"ativo"} onClose={onClose}/> }
             <h2>Generos:</h2>
             <div className="generos">
                 {data.genres.map(g => (

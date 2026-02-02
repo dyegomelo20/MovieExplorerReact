@@ -44,6 +44,12 @@
     text-align: center;
 }
 
+.description button{
+    background-color: #1d01d3;
+    color: #fff;
+    font-weight: bold;
+}
+
 
 
 .description.tv{
