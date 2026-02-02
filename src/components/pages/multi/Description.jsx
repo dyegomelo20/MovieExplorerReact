@@ -34,7 +34,6 @@ const Description = ({data, type}) => {
 
   return (
     <div className={`description ${type}` } >
-        {/* <ModalTrailer id={data.id} type={type} />  */}
         {type === "movie" && (
         <>
         <h1>{data.title}</h1>
