@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.3.0
+- Ajuste dinâmico do title das páginas
+- Modal de trailer para filmes e séries
+- Navegação entre trailers
+- Alerta quando não há trailer disponível
+
+
 ## v1.2.1
 - Exibe mensagem quando a busca não retorna resultados
 - Ajustes de espaçamento no CSS
