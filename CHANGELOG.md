@@ -1,18 +1,19 @@
 # Changelog
 
-### 1.3.0
+## v1.3.1
+- Adiciona efeito hover e ajusta botões da navbar
+
+## v1.3.0
 - Ajuste dinâmico do title das páginas
 - Modal de trailer para filmes e séries
 - Navegação entre trailers
 - Alerta quando não há trailer disponível
-
 
 ## v1.2.1
 - Exibe mensagem quando a busca não retorna resultados
 - Ajustes de espaçamento no CSS
 - Correção de textos
 - Remoção de console.log
-
 
 ## v1.2.0
 - Adicionada navegação por rotas dinâmicas
