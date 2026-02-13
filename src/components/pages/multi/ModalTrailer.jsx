@@ -23,7 +23,7 @@ const ModalTrailer = ({id, type, ativo, onClose}) => {
   return (
     <div className='overlay' onClick={onClose}>
         <div className={`modal ${ativo}`} onClick={(e) => e.stopPropagation()}>
-            <iframe  src={`https://www.youtube.com/embed/${trailer.key}`} frameBorder="1" ></iframe>
+            <iframe  src={`https://www.youtube.com/embed/${trailer.key}`} frameBorder="0" ></iframe>
             <div className="btn-trailer">
               <CustomButton onClick={() => setCounte(counte - 1)} disabled={counte === 0}>Anterior</CustomButton>
               <CustomButton onClick={() => setCounte(counte + 1)} disabled={counte === data?.results?.length - 1}>Próximo</CustomButton>

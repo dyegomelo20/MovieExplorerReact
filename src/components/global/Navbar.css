@@ -25,7 +25,15 @@ nav button {
     padding: 10px;
     border-radius: 0 15px 15px 0;
     font-size: 20px;
+    background-color: #1d01d3;
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.6s;
     cursor: pointer;
+}
+
+nav button:hover {
+    opacity: 1;
 }
 
 @media (max-width: 800px) {
