@@ -11,14 +11,14 @@ const Navbar = () => {
 
     if(!search) return
 
-    navigate(`/MovieExplorerReact/search?q=${search}`)
+    navigate(`/search?q=${search}`)
 
   }
 
   return (
     <nav >
         <div className="logo">
-            <h1><Link to={"/MovieExplorerReact"}>Filmes&Séries</Link></h1>
+            <h1><Link to={"/"}>Filmes&Séries</Link></h1>
         </div>
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Buscar filme ou série" onChange={(e) => setSearch(e.target.value)} />
