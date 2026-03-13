@@ -14,20 +14,20 @@ import Multi from './pages/Multi.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/MovieExplorerReact",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPages />,
     children: [
       {
-        path: "/MovieExplorerReact",
+        path: "/",
         element: <Home />
       },
       {
-        path: "/MovieExplorerReact/multi/:type/:id",
+        path: "/multi/:type/:id",
         element: <Multi />
       },
       {
-        path: "/MovieExplorerReact/search",
+        path: "/search",
         element: <Search />
       }
     ]
