@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom'
 
 // pages
 import ErrorPages from './pages/ErrorPages.jsx'
-import Home from './pages/home.jsx'
+import Home from './pages/Home.jsx'
 import Search from './pages/Search.jsx'
 import Multi from './pages/Multi.jsx'
 
